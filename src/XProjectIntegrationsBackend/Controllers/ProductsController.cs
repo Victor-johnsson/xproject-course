@@ -92,28 +92,28 @@ public class ProductsController(ILogger<ProductsController> logger, IPimService 
         }
     }
 
-    [HttpDelete("{id}")]
-    [Authorize(Policy = "MustBeAdmin")]
-    // [Authentica
-    public async Task<IActionResult> DeleteProduct(Guid id)
-    {
-        try
-        {
-            var (success, errorMessage, statusCode) = await _pimService.DeleteProductAsync(id);
-
-            if (!success)
-            {
-                return StatusCode(statusCode, errorMessage);
-            }
-
-            await _pimService.InvalidateCacheForProductAsync(id);
-
-            return NoContent();
-        }
-        catch (Exception ex)
-        {
-            _logger.LogError("Error deleting Product ID {Id}: {Message}", id, ex.Message);
-            return StatusCode(500, $"Internal Server Error: {ex.Message}");
-        }
-    }
+    // [HttpDelete("{id}")]
+    // [Authorize(Policy = "MustBeAdmin")]
+    // // [Authentica
+    // public async Task<IActionResult> DeleteProduct(Guid id)
+    // {
+    //     try
+    //     {
+    //         var (success, errorMessage, statusCode) = await _pimService.DeleteProductAsync(id);
+    //
+    //         if (!success)
+    //         {
+    //             return StatusCode(statusCode, errorMessage);
+    //         }
+    //
+    //         await _pimService.InvalidateCacheForProductAsync(id);
+    //
+    //         return NoContent();
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         _logger.LogError("Error deleting Product ID {Id}: {Message}", id, ex.Message);
+    //         return StatusCode(500, $"Internal Server Error: {ex.Message}");
+    //     }
+    // }
 }

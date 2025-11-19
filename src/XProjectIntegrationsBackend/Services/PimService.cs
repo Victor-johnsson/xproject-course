@@ -195,16 +195,4 @@ public class PimService : IPimService
         }
     }
 
-    public async Task InvalidateCacheForProductAsync(Guid id)
-    {
-        string cacheKey = $"product:{id}";
-        var cachedProduct = await _cacheService.GetAsync(cacheKey);
-
-        if (cachedProduct is null)
-        {
-            _logger.LogDebug($"Product ID: {id} not found in cache for invalidation.");
-        }
-        await _cacheService.RemoveAsync(cacheKey);
-        _logger.LogInformation($"Cache invalidated for product ID: {id}");
-    }
 }

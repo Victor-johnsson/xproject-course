@@ -14,6 +14,5 @@ public interface IPimService
         Guid id,
         string? authHeader = null
     );
-    Task InvalidateCacheForProductAsync(Guid id);
 }
 
