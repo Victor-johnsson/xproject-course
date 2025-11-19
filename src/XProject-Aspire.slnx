@@ -1,0 +1,14 @@
+<Solution>
+    <Project Path="XProject-Aspire.AppHost/XProject-Aspire.AppHost.csproj" />
+    <Project Path="XProject-Aspire.ServiceDefaults/XProject-Aspire.ServiceDefaults.csproj" />
+    <Project Path="WebshopX.FunctionApp/WebShopX.FunctionApp.Tests/WebShopX.FunctionApp.Tests.csproj" />
+    <Project Path="WebshopX.FunctionApp/WebShopX.FunctionService.Core/WebShopX.FunctionService.Core.csproj" />
+    <Project Path="WebshopX.FunctionApp/WebShopX.FunctionService.Service/WebShopX.FunctionService.Services.csproj" />
+    <Project Path="WebshopX.FunctionApp/WebShopX.FunctionService.Workers/WebShopX.FunctionService.Workers.csproj" />
+    <Project Path="integration-pim/integration-pim.ApiService/integration-pim.ApiService.csproj" />
+    <Project
+        Path="XProject.Integrations.CRM/XProject.Integrations.CRM/XProject.Integrations.CRM/XProject.Integrations.CRM.csproj" />
+    <Project Path="XProjectIntegrationsBackend/XProjectIntegrationsBackend.csproj" />
+    <Project Path="XProject-integrations-psp/integration-psp.ApiService/integration-psp.ApiService.csproj" />
+
+</Solution>

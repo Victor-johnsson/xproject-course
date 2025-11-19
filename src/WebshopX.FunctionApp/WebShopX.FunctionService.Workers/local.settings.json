@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "serviceBusTopicName": "sbt-xproject-integrations",
+    "serviceBusTransportSubscriptionName": "sbts-Transport-booking"
+  }
+}

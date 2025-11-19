@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Sdk Name="Aspire.AppHost.Sdk" Version="13.0.0"></Sdk>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>eaf856b0-4cf8-4a04-add1-5fc95d6003b7</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.AppHost"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.AppContainers"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.AppService"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.PostgreSQL"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.Redis"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.Sql"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.JavaScript"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Kubernetes"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.CosmosDB"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.Functions"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.KeyVault"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.ServiceBus"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Azure.Storage"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.NodeJs"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Redis"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.SqlServer"></PackageReference>
+    <PackageReference Include="Aspire.Hosting.Yarp"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XProject.Integrations.CRM\XProject.Integrations.CRM\XProject.Integrations.CRM\XProject.Integrations.CRM.csproj"></ProjectReference>
+    <ProjectReference Include="..\integration-pim\integration-pim.ApiService\integration-pim.ApiService.csproj"></ProjectReference>
+    <ProjectReference Include="..\XProject-integrations-psp\integration-psp.ApiService\integration-psp.ApiService.csproj"></ProjectReference>
+    <ProjectReference Include="../WebshopX.FunctionApp/WebShopX.FunctionService.Workers/WebShopX.FunctionService.Workers.csproj"></ProjectReference>
+    <ProjectReference Include="../XProjectIntegrationsBackend/XProjectIntegrationsBackend.csproj"></ProjectReference>
+  </ItemGroup>
+  <Target BeforeTargets="Build" Condition=" '$(DesignTimeBuild)' != 'true' " Name="RestoreNpm">
+    <ItemGroup>
+      <PackageJsons Include="..\*\package.json"></PackageJsons>
+    </ItemGroup>
+    <!-- Install npm packages if node_modules is missing -->
+    <Message Condition="!Exists('%(PackageJsons.RootDir)%(PackageJsons.Directory)/node_modules')" Importance="Normal" Text="Installing npm packages for %(PackageJsons.RelativeDir)"></Message>
+    <Exec Command="npm install" Condition="!Exists('%(PackageJsons.RootDir)%(PackageJsons.Directory)/node_modules')" WorkingDirectory="%(PackageJsons.RootDir)%(PackageJsons.Directory)"></Exec>
+  </Target>
+  <ItemGroup>
+    <Content Include="./Extensions/eventgrid.bicep">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

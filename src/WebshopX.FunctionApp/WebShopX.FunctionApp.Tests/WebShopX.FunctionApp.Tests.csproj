@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- <PackageReference Include="Azure.Messaging.ServiceBus"  /> -->
+    <PackageReference Include="Aspire.Azure.Messaging.ServiceBus"></PackageReference>
+    <PackageReference Include="coverlet.collector"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.ServiceBus"></PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk"></PackageReference>
+    <PackageReference Include="Moq"></PackageReference>
+    <PackageReference Include="NUnit"></PackageReference>
+    <PackageReference Include="NUnit.Analyzers"></PackageReference>
+    <PackageReference Include="NUnit3TestAdapter"></PackageReference>
+    <PackageReference Include="xunit"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebShopX.FunctionService.Core\WebShopX.FunctionService.Core.csproj"></ProjectReference>
+    <ProjectReference Include="..\WebShopX.FunctionService.Service\WebShopX.FunctionService.Services.csproj"></ProjectReference>
+    <ProjectReference Include="..\WebShopX.FunctionService.Workers\WebShopX.FunctionService.Workers.csproj"></ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="NUnit.Framework"></Using>
+  </ItemGroup>
+</Project>

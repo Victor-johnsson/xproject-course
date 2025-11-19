@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App"></FrameworkReference>
+    <PackageReference Include="Aspire.Azure.Data.Tables"></PackageReference>
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets"></PackageReference>
+    <PackageReference Include="Azure.Messaging.EventGrid"></PackageReference>
+    <PackageReference Include="Microsoft.ApplicationInsights.WorkerService"></PackageReference>
+    <PackageReference Include="Aspire.Azure.Messaging.ServiceBus"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.ApplicationInsights"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.EventGrid"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.OpenApi"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.ServiceBus"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Extensions.Timer"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.Functions.Worker.Sdk"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.OpenApi"></PackageReference>
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.ServiceBus"></PackageReference>
+    <PackageReference Include="Microsoft.Data.SqlClient.AlwaysEncrypted.AzureKeyVaultProvider"></PackageReference>
+    <PackageReference Include="Moq"></PackageReference>
+    <PackageReference Include="Aspire.StackExchange.Redis"></PackageReference>
+    <PackageReference Include="Aspire.Microsoft.Azure.StackExchangeRedis"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebShopX.FunctionService.Core\WebShopX.FunctionService.Core.csproj"></ProjectReference>
+    <ProjectReference Include="..\WebShopX.FunctionService.Service\WebShopX.FunctionService.Services.csproj"></ProjectReference>
+    <ProjectReference Include="../../XProject-Aspire.ServiceDefaults/XProject-Aspire.ServiceDefaults.csproj"></ProjectReference>
+    <ProjectReference Include="../../XProject-Aspire.ServiceDefaults/XProject-Aspire.ServiceDefaults.csproj"></ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Using Alias="ExecutionContext" Include="System.Threading.ExecutionContext"></Using>
+  </ItemGroup>
+</Project>

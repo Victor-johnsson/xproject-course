@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireSharedProject>true</IsAspireSharedProject>
+  </PropertyGroup>
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App"></FrameworkReference>
+    <PackageReference Include="Microsoft.Extensions.Http.Resilience"></PackageReference>
+    <PackageReference Include="Microsoft.Extensions.ServiceDiscovery"></PackageReference>
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol"></PackageReference>
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting"></PackageReference>
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore"></PackageReference>
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http"></PackageReference>
+    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime"></PackageReference>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Azure.Messaging.ServiceBus"></PackageReference>
+    <PackageReference Include="Aspire.Azure.Storage.Blobs"></PackageReference>
+    <PackageReference Include="Aspire.StackExchange.Redis"></PackageReference>
+    <PackageReference Include="Aspire.Microsoft.Azure.StackExchangeRedis"></PackageReference>
+    <PackageReference Include="Azure.Security.KeyVault.Secrets"></PackageReference>
+    <PackageReference Include="Azure.Messaging.EventGrid"></PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi"></PackageReference>
+    <PackageReference Include="Microsoft.Identity.Web"></PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore"></PackageReference>
+    <ProjectReference Include="../XProject-Aspire.ServiceDefaults/XProject-Aspire.ServiceDefaults.csproj"></ProjectReference>
+  </ItemGroup>
+</Project>

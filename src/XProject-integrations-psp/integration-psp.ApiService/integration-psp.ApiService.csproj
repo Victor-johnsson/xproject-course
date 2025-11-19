@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <ContainerRepository>acrugx47vukmeif2.azurecr.io/integration-psp/apiservice-x-integration-psp</ContainerRepository>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../XProject-Aspire.ServiceDefaults/XProject-Aspire.ServiceDefaults.csproj"></ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Azure.Npgsql"></PackageReference>
+    <PackageReference Include="Dapper"></PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi"></PackageReference>
+    <PackageReference Include="Npgsql"></PackageReference>
+    <PackageReference Include="Scalar.AspNetCore"></PackageReference>
+  </ItemGroup>
+</Project>

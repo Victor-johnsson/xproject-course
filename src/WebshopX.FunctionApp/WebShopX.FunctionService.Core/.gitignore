@@ -1,0 +1,23 @@
+# Build output
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.vs/
+.vscode/
+
+# Dependency packages
+packages/
+node_modules/
+
+# Logs & temp files
+*.log
+*.lock
+.env
+secrets.json
+
+# OS-specific files
+Thumbs.db
+.DS_Store

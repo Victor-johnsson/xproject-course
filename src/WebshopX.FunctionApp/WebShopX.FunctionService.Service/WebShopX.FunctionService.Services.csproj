@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Aspire.Azure.Data.Tables"></PackageReference>
+    <PackageReference Include="Aspire.StackExchange.Redis"></PackageReference>
+    <PackageReference Include="Newtonsoft.Json"></PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebShopX.FunctionService.Core\WebShopX.FunctionService.Core.csproj"></ProjectReference>
+  </ItemGroup>
+</Project>
