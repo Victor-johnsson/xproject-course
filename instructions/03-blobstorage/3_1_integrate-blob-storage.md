@@ -150,6 +150,3 @@ This exercise highlights:
 It also sets you up for the next exercise, where you’ll publish event messages to **Azure Service Bus**
 about successful uploads or product changes.
 
----
-
-**Next:** [Exercise 05 – Publish Events with Azure Service Bus »](../05-integrate-servicebus/README.md)

@@ -131,4 +131,4 @@ You’re ready to begin **Exercise 02 – Implementing Azure Integration**!
 
 ---
 
-**Next:** [Exercise 02 – Integrating with ProductService »](../02/ImplementingProductService.md)
+**Next:** [Exercise 02 – Integrating with ProductService »](../02-http-clients/2_1_ImplementingProductService.md)

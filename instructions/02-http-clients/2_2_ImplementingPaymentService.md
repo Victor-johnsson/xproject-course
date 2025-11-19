@@ -58,4 +58,4 @@ By completing it, you’ve established two external system links: product and pa
 
 ---
 
-**Next:** [Exercise 04 – Publishing Product and Payment Events to Azure Service Bus »](../04-integrate-servicebus/README.md)
+**Next:** [Exercise 03 – Integrate to blob storage »](../03-blobstorage/3_1_integrate-blob-storage.md)

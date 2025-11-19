@@ -230,6 +230,4 @@ This exercise demonstrated:
 
 ✅ You’ve completed the PIM integration!
 
-Up next, you’ll connect your backend to **Azure Service Bus** to send product update events when data changes.
-
-**Next:** [Exercise 03 – Integrating with Azure Service Bus »](../03-integrate-servicebus/README.md)
+**Next:** [Exercise 02-2 – Implementing Payment Service »](./2_2_ImplementingPaymentService.md)
